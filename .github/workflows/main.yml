@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        h1{
+            text-align: center;
+            color: rgb(18, 176, 228);
+        }
+        .about-box { background-color: #e7e7e7;
+             border: 2px solid #cccccc; 
+             border-radius: 10px; 
+             padding: 20px; 
+             width: 60%;
+              margin: 0 auto; 
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+       
+    </style>
+</head>
+<body>
+    <div><img src="./image.png">
+        <h1> 
+        Amrit  Kumar Mahto </h1></div>
+    <div class="about-box"> <h3> "Hi, I'm Amrit. I'm passionate about Airtificial intelligence, 
+        and I have experience working on projects like making website.
+         My skills include [list a few relevant skills such as problem-solving, 
+         technical proficiency, and communication. 
+         I'm eager to apply my knowledge and enthusiasm in a professional setting." </h3></div>
+         
+         <a href=""></a>
+         <form>
+            <table>
+                
+            </table>
+         </form>
+</body>
+</html>
