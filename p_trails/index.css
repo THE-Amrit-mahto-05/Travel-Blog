@@ -47,12 +47,12 @@ header.nav {
     display: flex;
     justify-content: end;
     padding: 0 2rem 0 0;
+    gap: 2rem;
 }
 
 .links a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     transition: transform 0.2s ease;
@@ -186,7 +186,7 @@ header.nav {
 .part3 {
     display: flex;
     justify-content: center;
-    margin-top: 8rem;
+    margin-top: 10rem;
 }
 
 .part4 > div {
