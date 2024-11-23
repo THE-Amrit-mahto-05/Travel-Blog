@@ -25,11 +25,15 @@ header.nav {
 .nav .logo {
     position: relative;
     font-size: 2rem;
-    color: rgb(255, 255, 255);
     font-family: Bulletto;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding-left: 20px;
+    padding-left: 7%;
+}
+
+.nav .logo a {
+    text-decoration: none;
+    color: white;
 }
 
 .links a {
@@ -37,13 +41,15 @@ header.nav {
     padding: 0 20px 0 0;
     text-decoration: none;
     color: rgb(194, 194, 194);
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     transition: color 0.2s ease-in-out;
+    transition: font-size 0.2s ease-in-out;
 }
 
 .links a:hover {
     color: rgb(67, 207, 232);
+    font-size: 1.2rem;
 }
 
 .video {
@@ -56,7 +62,7 @@ header.nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 6rem;
+    margin-top: 5rem;
 }
 
 .video video {
@@ -73,7 +79,7 @@ header.nav {
 .video .content {
     position: relative;
     justify-content: center;
-    margin-top: -6.5rem;
+    margin-top: -5rem;
 }
 
 .content p{
@@ -113,4 +119,85 @@ header.nav {
     width: 100%;
     mix-blend-mode: lighten;
     margin-top: -140px;
+}
+
+.part2 {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.part2 div a {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: monospace;
+    padding-top: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.part2 div a p {
+    padding-top: 1rem;
+}
+
+.part2 div img {
+    border-radius: 1rem;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.part2 div img:hover {
+    opacity: 0.7;
+}
+
+.part3 div:first-child {
+    width: 25rem;
+    margin-top: 1.6rem;
+}
+
+.part3 div:last-child {
+    width: 25rem;
+    margin-top: 1.6rem;
+    margin-left: 1rem;
+}
+
+.part3 p {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-left: 1rem;
+}
+
+.part3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+}
+
+.part4 > div {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.part4 {
+    margin-top: 4.5rem;
+}
+
+.part4 img {
+    border-radius: 1rem;
+}
+
+.part4 p {
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.part4 img:hover {
+    opacity: 0.7;
 }
