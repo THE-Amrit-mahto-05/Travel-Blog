@@ -144,15 +144,18 @@ header.nav {
 
 .part2 div a p {
     padding-top: 1rem;
+    font-weight: 50;
 }
 
 .part2 div img {
     border-radius: 1rem;
     transition: opacity 0.2s ease-in-out;
+    transition: transform 0.2s ease;
 }
 
 .part2 div img:hover {
     opacity: 0.7;
+    transform: scale(1.01);
 }
 
 .part3 div:first-child {
@@ -193,6 +196,7 @@ header.nav {
 .part4 img {
     border-radius: 1rem;
     transition: opacity 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .part4 p {
@@ -206,4 +210,5 @@ header.nav {
 
 .part4 img:hover {
     opacity: 0.7;
+    transform: scale(1.01);
 }
