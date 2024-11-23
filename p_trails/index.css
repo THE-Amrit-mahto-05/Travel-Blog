@@ -4,6 +4,14 @@
     margin: 0;
 }
 
+body {
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 @font-face {
     font-family: Bulletto;
     src: url(Beautiful\ Dream.otf);
