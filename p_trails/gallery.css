@@ -4,11 +4,18 @@
     margin: 0;
 }
 
+body {
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 @font-face {
     font-family: Bulletto;
     src: url(Beautiful\ Dream.otf);
 }
-
 header.nav {
     position: fixed;
     top: 0;
@@ -21,7 +28,6 @@ header.nav {
     padding: 20px;
     z-index: 1000;
 }
-
 .nav .logo {
     position: relative;
     font-size: 2rem;
@@ -29,26 +35,22 @@ header.nav {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 .nav .logo a {
     text-decoration: none;
     color: white;
 }
-
 .links {
     display: flex;
     justify-content: end;
     padding: 0 2rem 0 0;
+    gap: 2rem;
 }
-
 .links a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    transition: transform 0.2s ease;
-    transition: color 0.2 ease-in-out;
+    transition: color 0.2s ease-in-out, transform 0.2s ease;
 }
 
 .links a:hover {
@@ -56,154 +58,42 @@ header.nav {
     border-radius: 5px;
     color: rgb(67, 207, 232);
 }
-
-.video {
-    position: relative;
-    width: 100%;
-    height: 43.95rem;
+.slides{
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5rem;
+    position:relative;
+
 }
 
-.video video {
+.slides .list .item{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+
+}
+.slides .list .item img{
+    width:100%;
+    height:100%;
     object-fit: cover;
-    z-index: -1;
 }
+.slides .list .item .content{
+    position:absolute;
+    top: 20%;
+    width: 1140px;
+    max-width:80%;
+    left:50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color:aqua;
+    text-shadow: 0 5px 10px #0004;
 
-.video .content {
-    position: relative;
-    justify-content: center;
-    margin-top: -5rem;
 }
-
-.content p{
-    font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    font-size: 5rem;
-    font-weight: 100;
-    padding: 20px;
-    margin-bottom: 3rem;
-}
-
-.content a {
-    border: 2px solid white;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 10px 20px 10px 20px;
-    font-size: 1.5rem;
-    text-decoration: none;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    transition: background-color 0.2s ease-in-out;
-    transition: font-size 0.2s ease-in-out;
-}
-
-.content a:hover {
-    background-color: rgb(67, 207, 232);
-    font-size: 1.6rem;
-}
-
-.torn-shadow .img1 {
-    width: 100%;
-    mix-blend-mode: lighten;
-    opacity: 0.5;
-    margin-top: -80px;
-}
-
-.torn-paper .img2 {
-    width: 100%;
-    mix-blend-mode: lighten;
-    margin-top: -140px;
-}
-
-.part2 {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-}
-
-.part2 div a {
-    text-align: center;
-    font-size: 1.5rem;
-    font-family: monospace;
-    padding-top: 1rem;
+.slides .list .item .content .title{
     font-weight: bold;
-    text-decoration: none;
-    color: black;
-}
+    letter-spacing: 10px;
 
-.part2 div a p {
-    padding-top: 1rem;
-}
-
-.part2 div img {
-    border-radius: 1rem;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.part2 div img:hover {
-    opacity: 0.7;
-}
-
-.part3 div:first-child {
-    width: 25rem;
-    margin-top: 1.6rem;
-}
-
-.part3 div:last-child {
-    width: 25rem;
-    margin-top: 1.6rem;
-    margin-left: 1rem;
-}
-
-.part3 p {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-left: 1rem;
-}
-
-.part3 {
-    display: flex;
-    justify-content: center;
-    margin-top: 8rem;
-}
-
-.part4 > div {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 5rem;
-}
-
-.part4 {
-    margin-top: 4.5rem;
-}
-
-.part4 img {
-    border-radius: 1rem;
-    transition: opacity 0.2s ease;
-}
-
-.part4 p {
-    font-family: sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 1rem;
-    font-size: 1.1rem;
-}
-
-.part4 img:hover {
-    opacity: 0.7;
 }
