@@ -1,7 +1,7 @@
-*{
-    box-sizing: border-box;
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -13,304 +13,174 @@ body::-webkit-scrollbar {
 }
 
 @font-face {
-    font-family: Bulletto;
+    font-family: beautiful;
     src: url(Beautiful\ Dream.otf);
 }
 
-header.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
+@font-face {
+    font-family: forever;
+    src: url(Forever\ Freedom\ Regular.ttf);
+}
+
+@font-face {
+    font-family: miso-bold;
+    src: url(miso-bold.otf);
+}
+
+.main-structure {
+    background: url('https://images.pexels.com/photos/20170317/pexels-photo-20170317/free-photo-of-paris.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=10') no-repeat center center/cover;
+    height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    padding: 20px;
-    z-index: 1000;
-    height: 4rem;
-}
-
-.nav .logo {
-    position: relative;
-    font-size: 1.5rem;
-    font-family: Bulletto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-left: 50px;
-}
-
-.nav .logo a {
-    text-decoration: none;
-    color: white;
-}
-
-.links {
-    display: flex;
-    justify-content: end;
-    padding: 0 2rem 0 0;
-    gap: 2rem;
-}
-
-.links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    transition: color 0.2s ease-in-out, transform 0.2s ease;
-}
-
-.links a:hover {
-    transform: scale(1.1);
-    color: rgb(67, 207, 232);
-}
-
-.emptyblack {
-    width: 100%;
-    height: 10rem;
-    background-color: black;
-    margin-top: -6rem;
-}
-
-.dark-paper-top {
-    mix-blend-mode: darken;
-}
-
-.video {
-    position: relative;
-    width: 100%;
-    height: 43.95rem;
     overflow: hidden;
-    color: white;
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 45px;
+    height: 50vh;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.3s ease, width 0.3s ease, top 0.3s ease, gap 0.3s ease, background-color 0.3s ease;
+    top: 25%;
+    right: 1%;
+    gap: 3%;
+    z-index: 1000;
+}
+
+.nav_:first-child {
+    padding-top: 15px;
+}
+
+.nav:hover {
+    height: 70vh;
+    width: 80px;
+    top: 15%;
+    gap: 7%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav_ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    text-decoration: none;
+}
+
+.nav_:hover {
+    filter: opacity(0.7);
+}
+
+.nav_ img {
+    width: 25px;
+    filter: invert(1);
+}
+
+.nav_ span {
+    font-size: 12px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    margin-top: 10px;
+}
+
+.nav:hover .nav_ span {
+    opacity: 1;
+}
+
+.logo {
+    position: fixed;
+    color: black;
+    text-decoration: none;
+    font-size: 150%;
+    font-family: beautiful;
+    padding: 1em 0 0 2em;
+    z-index: 1000;
+}
+
+.section {
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 100%;
+    
+}
+
+.top-thing {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -10rem;
 }
 
-.video video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: -1;
+.top-thing p {
+    font-family: forever;
+    font-size: 20vh;
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(2px 1px 10px rgba(0,0,0,0.5));
 }
 
-.video .content {
-    position: relative;
-    margin-top: -5rem;
-}
-
-.content p{
-    font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    font-size: 5rem;
-    font-weight: 100;
-    padding: 20px;
-    margin-bottom: 3rem;
-}
-
-.content a {
-    display: inline-block;
-    border: 2px solid white;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 20px 20px;
-    font-size: 1.2rem;
-    text-decoration: none;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
-    z-index: 1;
-    font-weight: 600;
-}
-
-.content a:hover {
-    background-color: rgb(67, 207, 232);
-    transform: scale(1.05);
-}
-
-.torn-shadow .img1 {
+.spacing1 {
     width: 100%;
-    mix-blend-mode: lighten;
-    opacity: 0.5;
-    margin-top: -80px;
+    height: 20vh;
 }
 
-.torn-paper .img2 {
-    width: 100%;
-    mix-blend-mode: lighten;
-    margin-top: -140px;
+.main {
+    width: 90%;
+    margin: 0;
+    background-color: white;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-self: center;
 }
 
-.part2 {
+.cards {
     display: flex;
-    gap: 2rem;
     justify-content: center;
 }
 
-.part2 div a {
-    text-align: center;
-    font-size: 1.5rem;
-    font-family: monospace;
-    padding-top: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-}
-
-.allimages {
+.card-img {
     position: relative;
-    width: 350px;
-    height: 200px;
+    background: url(https://media.istockphoto.com/id/1443287362/photo/woman-hiking-in-mountains-on-the-background-of-lysefjorden.jpg?s=612x612&w=0&k=20&c=KvjX-5qcy0Q3dM03sBl8CYkvtF3g1Zn77Kd8uHdOXlA=) no-repeat center center/cover;
+    width: 25em;
+    height: 15em;
     background-size: cover;
     background-position: center;
     border-radius: 1rem;
     overflow: hidden;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, filter 0.3s ease;
 }
 
-.allimages:hover {
+.card-img:hover {
     background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: multiply;
     transform: scale(1.02);
+    filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.5));
     z-index: 10;
-    filter: drop-shadow(2px 2px 10px black);
 }
 
-.allimages div {
+.card-img p {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     z-index: 1;
     text-align: center;
-}
-
-.part3 div:first-child {
-    width: 25rem;
-    margin-top: 1.6rem;
-}
-
-.part3 div:last-child {
-    width: 25rem;
-    margin-top: 1.6rem;
-    margin-left: 1rem;
-}
-
-.part3 p {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-left: 1rem;
-}
-
-.part3 {
-    display: flex;
-    justify-content: center;
-    margin-top: 10rem;
-    margin-bottom: 4rem;
-}
-
-.part4 > div {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 2rem;
-}
-
-.lastimg img{
-    margin-top: -4rem;
-    width: 100%;
-    height: 500px;
-}
-
-.torn-shadow-copy .img1 {
-    width: 100%;
-    mix-blend-mode: lighten;
-    opacity: 0.6;
-    margin-top: -140px;
-}
-
-.torn-paper-copy .img2 {
-    width: 100%;
-    mix-blend-mode: lighten;
-}
-
-.lastimgtext {
-    text-align: center;
-    margin-top: -22rem;
-}
-
-.lastimgtext div:nth-child(1) {
-    color: white;
-    font-family: sans-serif;
-    font-size: 3rem;
-    font-weight: 500;
-    text-shadow: 3px 3px 2px black;
-    margin-bottom: 1rem;
-}
-
-.lastimgtext div:nth-child(2) {
-    color: white;
-    font-size: 1rem;
-    font-family: monospace;
-    font-weight: 500;
-    text-shadow: 2px 2px 1px black;
-    margin-bottom: 1rem;
-}
-
-.lastimgtext div:nth-child(3) {
-    color: white;
-    font-size: 1rem;
-    font-family: monospace;
-    font-weight: 500;
-    text-shadow: 2px 2px 1px black;
-    margin-bottom: 2rem;
-}
-
-.lastimgtext a {
-    text-decoration: none;
-    color: rgb(67, 207, 232);
-    padding-right: 10px;
-    font-weight: bold;
-    text-shadow: 2px 2px 1px black;
-}
-
-.merging-black {
-    width: 100%;
-    height: 170px;
-    background-color: black;
-    z-index: 10;
-}
-
-.lastpart {
-    color: white;
-    background-color: black;
-    width: 100%;
-    height: 40px;
-    text-align: center;
-    align-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    font-size: 15px;
-}
-
-.lastpart_x {
-    color: white;
-    background-color: black;
-    width: 100%;
-    height: 40px;
-    text-align: center;
-    align-content: center;
-    font-family: Bulletto;
-    font-size: 30px;
-    padding-bottom: 50px;
+    font-family: miso-bold;
 }
