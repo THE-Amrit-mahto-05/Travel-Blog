@@ -28,8 +28,8 @@ body::-webkit-scrollbar {
 }
 
 @font-face {
-    font-family: austone;
-    src: url(Austone\ Winter.otf);
+    font-family: wasted;
+    src: url(Wasted-Vindey.ttf);
 }
 
 @font-face {
@@ -209,7 +209,7 @@ body::-webkit-scrollbar {
 }
 
 .white-area p:nth-child(1) {
-    font-family: austone;
+    font-family: wasted;
     font-size: 1.5em;
     width: 100%;
     text-align: center;
