@@ -175,7 +175,7 @@ body::-webkit-scrollbar {
     height: 100%;
     transform-origin: center ;
     transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i)*45deg)) translateZ(500px);
+    transform: rotateY(calc(var(--i)*51.42deg)) translateZ(400px);
 }
 .slider span img{
     position: absolute;
