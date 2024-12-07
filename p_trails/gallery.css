@@ -148,13 +148,16 @@ body::-webkit-scrollbar {
 }
 
 .main {
-    width: 100%;
+    width: 85%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     display: grid;
     justify-content: space-around;
     grid-template-columns: repeat(3,1fr);
+    justify-self: center;
+    grid-gap: 45px;
+    border-radius: 8em;
 }
 
 .img-coloumn-1 {
@@ -180,7 +183,7 @@ body::-webkit-scrollbar {
 
 .dark-back-img {
     width: 20em;
-    background-color: rgb(63, 57, 50);
+    background-color: rgb(255, 248, 235);
     height: 30em;
     border-radius: 15px;
     display: flex;
@@ -196,8 +199,10 @@ body::-webkit-scrollbar {
     align-self: flex-end;
     rotate: 10deg;
     border-radius: 10px;
-    filter: brightness(0.3);
+    filter: brightness(0.2);
     transition: transform 0.5s ease, rotate 0.5s ease, z-index 0.3s ease, filter 0.5s ease;
+    opacity: 1;
+    border: 1px solid black;
 }
 
 .mid-img{
@@ -209,31 +214,45 @@ body::-webkit-scrollbar {
     border-radius: 10px;
     transform: scale(2.5);
     filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.5));
+    border: 0.5px solid black;
 }
 
-.bottom-img{
+.bottom-img {
     height: 150px;
     width: 150px;
     overflow: hidden;
     rotate: -20deg;
     border-radius: 10px;
-    filter: brightness(0.3);
-    transition: transform 0.5s ease, rotate 0.5s ease, z-index 2s ease, filter 0.5s ease;
+    filter: brightness(0.2);
+    transition: transform 0.5s ease, rotate 0.5s ease, filter 0.5s ease, opacity 0.5s ease;
+    opacity: 1; 
+    border: 1px solid black;
 }
 
-.dark-back-img:hover .top-img {
+.dark-back-img:hover .top-img{
     transform: scale(1.2);
     rotate: 20deg;
     z-index: 2;
-    filter: brightness(1);
-    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.5));
-    
+    filter: brightness(1) drop-shadow(2px 2px 5px rgba(0,0,0,0.5));
+    opacity: 1;
 }
 
 .dark-back-img:hover .bottom-img {
     transform: scale(1.2);
     rotate: -30deg;
+    filter: brightness(1) drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+    opacity: 1;
     z-index: 2;
-    filter: brightness(1);
-    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.5));
+}
+
+.text {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 25px;
+    font-family: wasted;
+    margin-bottom: -50px;
 }
