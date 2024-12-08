@@ -1,209 +1,245 @@
-*{
-    box-sizing: border-box;
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 @font-face {
-    font-family: Bulletto;
+    font-family: beautiful;
     src: url(Beautiful\ Dream.otf);
 }
 
-header.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
+@font-face {
+    font-family: forever;
+    src: url(Forever\ Freedom\ Regular.ttf);
+}
+
+@font-face {
+    font-family: miso-bold;
+    src: url(miso-bold.otf);
+}
+
+@font-face {
+    font-family: wasted;
+    src: url(Wasted-Vindey.ttf);
+}
+
+.main-structure {
+    background: url('https://www.premiumbeat.com/blog/wp-content/uploads/2021/01/run-and-gun-vlogging-outdoors.jpg') no-repeat center center/cover;
+    height: 100vh;
     width: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: -1;
+
+}
+
+.header {
+    position: fixed;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: black;
-    padding: 20px;
+    justify-content: space-around;
+    z-index: 100;
+}
+
+.nav {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 45px;
+    height: 50vh;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.3s ease, width 0.3s ease, top 0.3s ease, gap 0.3s ease, background-color 0.3s ease;
+    top: 25%;
+    right: 1%;
+    gap: 3%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.nav_:first-child {
+    padding-top: 15px;
+}
+
+.nav:hover {
+    height: 70vh;
+    width: 80px;
+    top: 15%;
+    gap: 7%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav_ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav_:hover {
+    filter: opacity(0.7);
+}
+
+.nav_ img {
+    width: 25px;
+    filter: invert(1);
+}
+
+.nav_ span {
+    font-size: 12px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    margin-top: 10px;
+}
+
+.nav:hover .nav_ span {
+    opacity: 1;
+}
+
+.logo {
+    position: fixed;
+    color: black;
+    text-decoration: none;
+    font-size: 150%;
+    font-family: beautiful;
+    padding: 1em 0 0 2em;
     z-index: 1000;
 }
 
-.nav .logo {
-    position: relative;
-    font-size: 2rem;
-    font-family: Bulletto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.section {
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 100%;
+    
 }
 
-.nav .logo a {
-    text-decoration: none;
-    color: white;
-}
-
-.links {
-    display: flex;
-    justify-content: end;
-    padding: 0 2rem 0 0;
-}
-
-.links a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    transition: transform 0.2s ease;
-    transition: color 0.2 ease-in-out;
-}
-
-.links a:hover {
-    transform: scale(1.1);
-    border-radius: 5px;
-    color: rgb(67, 207, 232);
-}
-
-.video {
-    position: relative;
-    width: 100%;
-    height: 43.95rem;
-    overflow: hidden;
-    color: white;
-    text-align: center;
+.top-thing {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
 }
 
-.video video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: -1;
+.top-thing p {
+    font-family: forever;
+    font-size: 15vh;
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(2px 1px 10px rgba(0,0,0,0.7));
+    letter-spacing: 5px;
 }
 
-.video .content {
+.spacing1 {
+    width: 100%;
+    height: 100vh;
+}
+.main {
+    width: 85%;
+    margin: 0;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    justify-self: center;
+    justify-content: center;
+    background-color: rgba(122, 122, 122, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 6em 0 ;
+    border-radius: 8em;
+    gap: 4em;
+    border: 1px solid rgba(0,0,0,0.1);
     position: relative;
-    justify-content: center;
-    margin-top: -5rem;
+
+    
 }
 
-.content p{
-    font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    font-size: 5rem;
-    font-weight: 100;
-    padding: 20px;
-    margin-bottom: 3rem;
+
+.images{
+    margin: 0;
 }
 
-.content a {
-    border: 2px solid white;
+.images img{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 200px;
+   
+}
+
+.box{
+    position: relative;
+    margin-left: 10px;
+    margin-right:10px ;
+    height:350px;
+    width:300px;
+    border-radius: 20px;
+    background-color: rgb(97, 38, 38);
+    overflow: hidden;
+  
+
+}
+.box:hover{
+    transform: 0.1s black   ;
+}
+.title{
+    text-align: center;
+    background-color: rgb(126, 53, 53);
+    padding: 5px;
+    
+    
+}
+.para{
+    text-align: center;
+    background-color: rgb(103, 21, 21);
+    padding: 5px;
+    height: 100px;
+    width: auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+ 
+    padding: 5px;
+    
+
+}
+
+
+button{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    margin-bottom: 5px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: auto;
+    width: auto;
+    
+    
+}
+
+button:hover{
+    background-color: black;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 10px 20px 10px 20px;
-    font-size: 1.5rem;
-    text-decoration: none;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    transition: background-color 0.2s ease-in-out;
-    transition: font-size 0.2s ease-in-out;
+    transition: 0.5s;
+    cursor: pointer;
+
 }
 
-.content a:hover {
-    background-color: rgb(67, 207, 232);
-    font-size: 1.6rem;
-}
-
-.torn-shadow .img1 {
-    width: 100%;
-    mix-blend-mode: lighten;
-    opacity: 0.5;
-    margin-top: -80px;
-}
-
-.torn-paper .img2 {
-    width: 100%;
-    mix-blend-mode: lighten;
-    margin-top: -140px;
-}
-
-.part2 {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-}
-
-.part2 div a {
-    text-align: center;
-    font-size: 1.5rem;
-    font-family: monospace;
-    padding-top: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-}
-
-.part2 div a p {
-    padding-top: 1rem;
-}
-
-.part2 div img {
-    border-radius: 1rem;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.part2 div img:hover {
-    opacity: 0.7;
-}
-
-.part3 div:first-child {
-    width: 25rem;
-    margin-top: 1.6rem;
-}
-
-.part3 div:last-child {
-    width: 25rem;
-    margin-top: 1.6rem;
-    margin-left: 1rem;
-}
-
-.part3 p {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-left: 1rem;
-}
-
-.part3 {
-    display: flex;
-    justify-content: center;
-    margin-top: 8rem;
-}
-
-.part4 > div {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 5rem;
-}
-
-.part4 {
-    margin-top: 4.5rem;
-}
-
-.part4 img {
-    border-radius: 1rem;
-    transition: opacity 0.2s ease;
-}
-
-.part4 p {
-    font-family: sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 1rem;
-    font-size: 1.1rem;
-}
-
-.part4 img:hover {
-    opacity: 0.7;
-}
