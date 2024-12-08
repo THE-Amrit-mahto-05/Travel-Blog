@@ -1,209 +1,265 @@
-*{
-    box-sizing: border-box;
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 @font-face {
-    font-family: Bulletto;
+    font-family: beautiful;
     src: url(Beautiful\ Dream.otf);
 }
 
-header.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
+@font-face {
+    font-family: forever;
+    src: url(Forever\ Freedom\ Regular.ttf);
+}
+
+@font-face {
+    font-family: miso-bold;
+    src: url(miso-bold.otf);
+}
+
+@font-face {
+    font-family: wasted;
+    src: url(Wasted-Vindey.ttf);
+}
+
+.main-structure {
+    background: url('https://images.pexels.com/photos/1324803/pexels-photo-1324803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+    height: 100vh;
     width: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: -1;
+
+}
+
+.header {
+    position: fixed;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: black;
-    padding: 20px;
+    justify-content: space-around;
+}
+
+.nav {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 45px;
+    height: 50vh;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.3s ease, width 0.3s ease, top 0.3s ease, gap 0.3s ease, background-color 0.3s ease;
+    top: 25%;
+    right: 1%;
+    gap: 3%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.nav_:first-child {
+    padding-top: 15px;
+}
+
+.nav:hover {
+    height: 70vh;
+    width: 80px;
+    top: 15%;
+    gap: 7%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav_ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav_:hover {
+    filter: opacity(0.7);
+}
+
+.nav_ img {
+    width: 25px;
+    filter: invert(1);
+}
+
+.nav_ span {
+    font-size: 12px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    margin-top: 10px;
+}
+
+.nav:hover .nav_ span {
+    opacity: 1;
+}
+
+.logo {
+    position: fixed;
+    color: black;
+    text-decoration: none;
+    font-size: 150%;
+    font-family: beautiful;
+    padding: 1em 0 0 2em;
     z-index: 1000;
 }
 
-.nav .logo {
-    position: relative;
-    font-size: 2rem;
-    font-family: Bulletto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.section {
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 100%;
+    
 }
 
-.nav .logo a {
-    text-decoration: none;
-    color: white;
-}
-
-.links {
-    display: flex;
-    justify-content: end;
-    padding: 0 2rem 0 0;
-}
-
-.links a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    transition: transform 0.2s ease;
-    transition: color 0.2 ease-in-out;
-}
-
-.links a:hover {
-    transform: scale(1.1);
-    border-radius: 5px;
-    color: rgb(67, 207, 232);
-}
-
-.video {
-    position: relative;
-    width: 100%;
-    height: 43.95rem;
-    overflow: hidden;
-    color: white;
-    text-align: center;
+.top-thing {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    flex-direction: column;
+    gap: 20vh;
 }
 
-.video video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: -1;
+.top-thing p:first-child {
+    font-family: forever;
+    font-size: 15vh;
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,1));
 }
 
-.video .content {
-    position: relative;
-    justify-content: center;
-    margin-top: -5rem;
-}
-
-.content p{
+.top-thing p:nth-child(2) {
     font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    font-size: 5rem;
-    font-weight: 100;
-    padding: 20px;
-    margin-bottom: 3rem;
-}
-
-.content a {
-    border: 2px solid white;
+    font-size: 3vh;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 10px 20px 10px 20px;
-    font-size: 1.5rem;
-    text-decoration: none;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    transition: background-color 0.2s ease-in-out;
-    transition: font-size 0.2s ease-in-out;
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,1));
+    margin-top: -18vh;
 }
 
-.content a:hover {
-    background-color: rgb(67, 207, 232);
-    font-size: 1.6rem;
-}
-
-.torn-shadow .img1 {
+.spacing1 {
     width: 100%;
-    mix-blend-mode: lighten;
-    opacity: 0.5;
-    margin-top: -80px;
+    height: 100vh;
 }
 
-.torn-paper .img2 {
-    width: 100%;
-    mix-blend-mode: lighten;
-    margin-top: -140px;
-}
-
-.part2 {
+.main {
+    background: rgba(0, 0, 0, 0.1);
+    width: 85%;
+    height: 100vh;
+    justify-self: center;
+    border-radius: 8em;
+    backdrop-filter: blur(10px);
     display: flex;
-    gap: 2rem;
     justify-content: center;
+    align-items: center;
 }
 
-.part2 div a {
-    text-align: center;
-    font-size: 1.5rem;
-    font-family: monospace;
-    padding-top: 1rem;
-    font-weight: bold;
-    text-decoration: none;
+.card-img {
+    background: url(https://media.istockphoto.com/id/1216283260/photo/paper-cardboard-background-natural-corrugated-carton-sheet-kraft-cardboard-texture-with.jpg?s=612x612&w=0&k=20&c=iXZG_oQk6YFphT-cnb5ihMwKeqpfmcAoGwlU_1AafRQ=) no-repeat center center/cover;
+    width: 50em;
+    height: 30em;
+    border-radius: 2em;
+    filter: drop-shadow(2px 2px 5px black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-part {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-part p:nth-child(1) {
+    color: white;
+    font-size: 80px;
+    font-family: miso-bold;
+    filter: drop-shadow(2px 1px 5px black);
+}
+
+.contact-part p:nth-child(2) {
+    color: rgb(255, 255, 255);
+    font-family: miso-bold;
+    font-size: 50px;
+    filter: drop-shadow(2px 1px 5px black);
+}
+
+.contact-part p:nth-child(3) {
     color: black;
+    font-family: wasted;
+    font-size: 24px;
 }
 
-.part2 div a p {
-    padding-top: 1rem;
-}
-
-.part2 div img {
-    border-radius: 1rem;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.part2 div img:hover {
-    opacity: 0.7;
-}
-
-.part3 div:first-child {
-    width: 25rem;
-    margin-top: 1.6rem;
-}
-
-.part3 div:last-child {
-    width: 25rem;
-    margin-top: 1.6rem;
-    margin-left: 1rem;
-}
-
-.part3 p {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-left: 1rem;
-}
-
-.part3 {
-    display: flex;
-    justify-content: center;
-    margin-top: 8rem;
-}
-
-.part4 > div {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 5rem;
-}
-
-.part4 {
-    margin-top: 4.5rem;
-}
-
-.part4 img {
-    border-radius: 1rem;
-    transition: opacity 0.2s ease;
-}
-
-.part4 p {
-    font-family: sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
+.contact-part p:nth-child(4) {
+    color: black;
+    font-family: wasted;
+    font-size: 24px;
     text-align: center;
-    padding-top: 1rem;
-    font-size: 1.1rem;
 }
 
-.part4 img:hover {
-    opacity: 0.7;
+.email-button {
+    background-color: rgba(0,0,0,0.5);
+    width: 10em;
+    height: 3em;
+    border-radius: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.email-button img{
+    width: 30px;
+    filter: invert()
+}
+
+.contact-part a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-top-space {
+    height: 30vh;
+}
+
+footer {
+    height: 40vh;
+    background-color: black;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    justify-content: center;
+    justify-items: center
+}
+
+footer > p {
+    color: white;
+    font-family: beautiful;
+    font-size: 50px;
+}
+
+footer div p {
+    color: rgb(190, 190, 190);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.madeby {
+    color: rgb(190, 190, 190);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
 }
