@@ -187,7 +187,7 @@ body::-webkit-scrollbar {
     height:350px;
     width:300px;
     border-radius: 20px;
-    background-color: rgb(97, 38, 38);
+    background-color: rgb(255, 248, 248);
     overflow: hidden;
   
 
@@ -197,14 +197,14 @@ body::-webkit-scrollbar {
 }
 .title{
     text-align: center;
-    background-color: rgb(126, 53, 53);
+    background-color:  rgb(255, 248, 248);
     padding: 5px;
     
     
 }
 .para{
     text-align: center;
-    background-color: rgb(103, 21, 21);
+    background-color: rgb(255, 248, 248);
     padding: 5px;
     height: 100px;
     width: auto;
