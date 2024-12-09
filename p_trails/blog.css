@@ -158,9 +158,9 @@ body::-webkit-scrollbar {
     justify-content: center;
     background-color: rgba(122, 122, 122, 0.1);
     backdrop-filter: blur(10px);
-    padding: 6em 0 ;
+    padding: 6em 50px ;
     border-radius: 8em;
-    gap: 4em;
+    gap: 14px;
     border: 1px solid rgba(0,0,0,0.1);
     position: relative;
 
@@ -185,10 +185,11 @@ body::-webkit-scrollbar {
     height: 30em; 
     filter: drop-shadow(0px 1px 2px rgba(0,0,0,0.5)); 
     transition: filter 0.2s ease, transform 0.2s ease; 
-    margin: 0 -40px 0 -40px; 
+    margin: 0 -40px 140px -40px; 
     border-radius: 2em; 
     background-color: rgb(255, 248, 235); 
     overflow: hidden; 
+
 }
 
 .box:hover {
@@ -212,7 +213,7 @@ body::-webkit-scrollbar {
     border-bottom-right-radius: 20px;
     overflow: hidden;
     box-sizing: border-box;
- 
+    font-size: auto;
     padding: 5px;
     
 
