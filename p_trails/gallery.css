@@ -204,6 +204,7 @@ body::-webkit-scrollbar {
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
 }
 
 .top-img{
