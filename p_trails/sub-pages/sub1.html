@@ -1,153 +1,50 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sub.css">
+</head>
+<body>
 
-body {
-    overflow-y: scroll;
-}
+    <div class="main-img"></div>
 
-body::-webkit-scrollbar {
-    display: none;
-}
+    <a href="index.html" class="logo">Fever Dream</a>
 
-@font-face {
-    font-family: beautiful;
-    src: url(../Beautiful\ Dream.otf);
-}
+    <div class="top-space"></div>
 
-@font-face {
-    font-family: forever;
-    src: url(../Forever\ Freedom\ Regular.ttf);
-}
+    <div class="main-structure">
+        <div class="top-space-card"></div>
 
-@font-face {
-    font-family: miso-bold;
-    src: url(../miso-bold.otf);
-}
+        <div class="heading">GET INSPIRED TO TRAVEL</div>
+        <div class="space-bw"></div>
 
-@font-face {
-    font-family: wasted;
-    src: url(../Wasted-Vindey.ttf);
-}
+        <div class="card">
+            <div class="img-card"></div>
+            <div class="space-text"></div>
+            <div class="space-text"></div>
+            <div class="text-container">
+                <div class="card-txt">A Dutch proverb goes “He who is outside his door has the hardest part of his journey behind him.” Planning a trip and being on the road is a lot easier than you think. It’s the decision to take that step out the door that is the hardest part. It requires the most change. You’re leaving your old life behind for a new one. I know what it is like because I made the same decision too. Millions of people have.</div>
+                <div class="space-text"></div>
+                <div class="card-txt">Don’t let fear hold you back from traveling. If you’re still unsure if travel is right for you below are some inspiring posts to help you take that first step out the door.</div>
+            </div>
+            <div class="space-text"></div>
+            <div class="space-text"></div>
+        </div>
 
-.main-img {
-    background: url(https://images.pexels.com/photos/56832/road-asphalt-space-sky-56832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) no-repeat center center/cover;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    position: fixed;
-    z-index: -1;
-}
+        <div class="top-space-card"></div>
+    </div>
 
-.logo {
-    position: fixed;
-    color: black;
-    text-decoration: none;
-    font-size: 150%;
-    font-family: beautiful;
-    padding: 1em 0 0 2em;
-    z-index: 1000;
-}
-
-.top-space {
-    width: 100%;
-    height: 10vh;
-}
-
-.main-structure {
-    width: 85%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
-    border-radius: 8em;
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
-.heading {
-    color: white;
-    font-family: miso-bold;
-    font-size: 80px;
-    filter: drop-shadow(2px 1px 10px black);
-}
-
-.space-bw {
-    width: 100%;
-    height: 15vh;
-}
-
-.top-space-card {
-    height: 20vh;
-    grid-column: span 3;
-}
-
-.card {
-    height: auto;
-    width: 70em;
-    background-color: rgb(255, 248, 235);
-    border-radius: 2em;
-}
-
-.img-card {
-    height: 30em;
-    width: 70em;
-    background: url(https://media.nomadicmatt.com/2023/travelinspiration.jpeg) no-repeat center center/cover;
-    border-top-left-radius: 2em;
-    border-top-right-radius: 2em;
-}
-
-.space-text {
-    width: 100%;
-    height: 2em;
-}
-
-.text-container {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card-txt {
-    width: 90%;
-    font-size: 24px;
-    font-family: wasted;
-    letter-spacing: 1px;
-}
-
-.footer-top-space {
-    height: 20vh;
-}
-
-footer {
-    height: 40vh;
-    background-color: black;
-    display: grid;
-    grid-template-rows: repeat(7, 1fr);
-    justify-content: center;
-    justify-items: center
-}
-
-footer > p {
-    color: white;
-    font-family: beautiful;
-    font-size: 50px;
-}
-
-footer div p{
-    color: rgb(190, 190, 190);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.madeby {
-    color: rgb(190, 190, 190);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-}
+    <div class="footer-top-space"></div>
+    <footer>
+        <div></div>
+        <div></div>
+        <p>Fever Dream</p>
+        <div></div>
+        <div><p>© Fever Dream 2024</p></div>
+        <div class="madeby">Made By Sushant, Vansh & Amrit</div>
+        <div></div>
+    </footer>
+</body>
+</html>
