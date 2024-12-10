@@ -33,7 +33,7 @@ body::-webkit-scrollbar {
 }
 
 .main-structure {
-    background: url('https://images.pexels.com/photos/1324803/pexels-photo-1324803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+    background: url('https://images.pexels.com/photos/1774929/pexels-photo-1774929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
     height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -221,11 +221,6 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    transition: background-color 0.2 ease;
-}
-
-.email-button:hover {
-    background-color: black;
 }
 
 .email-button img{
