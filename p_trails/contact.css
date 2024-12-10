@@ -223,6 +223,10 @@ body::-webkit-scrollbar {
     justify-content: space-evenly;
 }
 
+.email-button:hover {
+    background-color: black;
+}
+
 .email-button img{
     width: 30px;
     filter: invert()
